@@ -182,7 +182,7 @@ header .site-title div{
 }
 
 #body-content .section .section{
-  margin-top: -40px;
+  margin-top: -70px;
 }
 
 #body-content .section .section .section{
@@ -215,6 +215,14 @@ header .site-title div{
 #main-menu a{
   color: #63666a;
   text-decoration: none;
+}
+
+a.current{
+  font-weight: bold;
+}
+
+li.active a{
+  font-weight: bold;
 }
 
 #main-menu .toctree-l1{
