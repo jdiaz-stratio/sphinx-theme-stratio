@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 	var closed = true;
 	var numLis =  $('#versions li').length;
-	var maxHeight = ($('#versions li').height() * numLis) + 28;
+	var maxHeight = ($('#versions li').height() * numLis) + 15;
 	var minHeight = $('#versions').height();
    	$('#versions').click(eventHandler);
 
@@ -18,6 +18,13 @@ $( document ).ready(function() {
 		
 	}
 });
+
+$(document).ready(function(){
+  $('#responsive-button').click(function(){
+    $('#sidebar').toggleClass('shown');
+  });
+});
+
 
 
 /*** SCROLL BAR ***/
