@@ -13,24 +13,16 @@ $( document ).ready(function() {
 			closed = !closed;
 		});		
 	}
+
+	function animateArrow(){
+		
+	}
 });
 
 
 /*** SCROLL BAR ***/
 $(document).ready(function(){
-  $('aside').mCustomScrollbar();
+ $('#main-menu').mCustomScrollbar({theme:'dark-2'});
 });
 
-/*** Header scroll ***/
 
-$( window ).scroll(function(){
-  console.log($(window).scrollTop());
-  if ($(window).scrollTop() >= 70) {
-    $('#main-nav').addClass('fixed');
-    $('#sidebar').addClass('fixed');
-  }
-  else {
-    $('#main-nav').removeClass('fixed');
-    $('#sidebar').removeClass('fixed');
-  }
-});

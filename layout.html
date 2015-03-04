@@ -40,26 +40,32 @@
     </head>
     <body>
         <header>
+          <div id="main-header">
             <img src="_static/images/stratio-logo.png">
             <div class="site-title">
                 <div>
                      ONLINE DOCUMENTATION
                 </div>
             </div>
-        </header>
-        <nav id="main-nav">
-            <img class="module-logo" src="_static/images/module-logo.png">
+          </div>
+        </header>       
+        <aside id="sidebar">
+          <div id="sidebar-options">
+             <img class="module-logo" src="_static/images/module-logo.png">
             <div class="module-name">
                 STRATIO
                 <span> STREAMING </span>              
+            </div>
+            <div class="more-products-arrow">
+
             </div>
              <div id="versions" class="select-style">    
                 <ul>
                     <li> {{ version }} <a class="arrow">›</a></li>
                    {%- for avariableVersion in theme_versions %}
                       <li> 
-                          <a href="{{ avariableVersion }}">
-                              {{ avariableVersion }}
+                          <a href="../{{ avariableVersion }}">
+                             {{ avariableVersion }}
                           </a>                        
                       </li>
                   {%- endfor %}     
@@ -74,16 +80,17 @@
              <a href="https://twitter.com/stratiobd" target="_blank" class="support">
                  <img class="helper" src="_static/images/twitter.png" alt=""/>
              </a>         
-        </nav>
-        <aside id="sidebar">
-        {% block menu %}
-          {% set toctree = toctree(maxdepth=2, collapse=True, includehidden=True) %}
-          {% if toctree %}
-              {{ toctree }}
-          {% else %}
-            {{ toc }}
-          {% endif %}
-        {% endblock %}
+          </div>
+          <div id="main-menu">
+            {% block menu %}
+              {% set toctree = toctree(maxdepth=2, collapse=True, includehidden=True) %}
+              {% if toctree %}
+                {{ toctree }}
+              {% else %}
+                {{ toc }}
+              {% endif %}
+            {% endblock %}
+          </div>       
         </aside>
         <div id="main-content">                
                 {% include "breadcrumbs.html" %}                   
