@@ -53,36 +53,63 @@
         </header>       
         <aside id="sidebar">
           <div id="sidebar-options">
-             <img class="module-logo" src="_static/images/module-logo.png">
-            <div class="module-name">
-                STRATIO
-                <span> STREAMING </span>              
+            <a href="index.html">
+              <img class="module-logo" src="_static/images/module-logo.png">            
+              <div class="module-name">
+                  STRATIO
+                  <span> STREAMING </span>              
+              </div>
+            </a>
+            <div id="select-product" class="closed">
+                <a href="" class="close-more-products">
+                    <i class="fa fa-times"></i>
+                </a>
+                <h3> SELECT ONE OF THE STRATIO PRODUCTS...</h3>
+                <div class="products-content">
+                    <ul class="category">
+                        <li><a href=""><img class="products-logo" src="_static/images/module-logo.png"><span>STRATIO PLATFORM </span> </a></li>
+                    </ul>
+                    <ul class="category">
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">STRATIO <span> ADMIN </span> </a> </li>
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">STRATIO <span> INGESTION </span></a></li>
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">STRATIO <span> STREAMING </span></a></li>
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">STRATIO <span> CROSSDATA </span></a></li>
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">STRATIO <span> SPARK DEEP </span></a></li>
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">STRATIO <span> CASSANDRA </span></a></li>
+                    </ul>
+                    <ul class="category">
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">STRATIO DATAVIS </a> </li>
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">SPARKTA</a> </li>
+                        <li><a href=""> <img class="products-logo" src="_static/images/module-logo.png">SPARKDB</a> </li>
+                    </ul>
+                </div>
             </div>
             <div class="more-products-arrow">
+                    <a href=""> › </a>
 
             </div>
-             <div id="versions" class="select-style">    
-                <ul>
-                    <li> {{ version }} <a class="arrow">›</a></li>
-                   {%- for avariableVersion in theme_versions %}
-                      <li> 
-                          <a href="../{{ avariableVersion }}">
-                             {{ avariableVersion }}
-                          </a>                        
-                      </li>
-                  {%- endfor %}     
-                </ul> 
+            <div id="versions" class="select-style">    
+              <ul>
+                  <li> {{ version }} <a class="arrow">›</a></li>
+                 {%- for avariableVersion in theme_versions %}
+                    <li> 
+                        <a href="../{{ avariableVersion }}">
+                           {{ avariableVersion }}
+                        </a>                        
+                    </li>
+                {%- endfor %}     
+              </ul> 
+              </div>
+              <a href="{{ theme_github }}" target="_blank" class="support">
+              <img class="helper" src="_static/images/github.png" alt=""/>
+              </a>   
+              <a href="{{ theme_jira }}" target="_blank" class="support">
+              <img class="helper" src="_static/images/jira.png" alt=""/>
+              </a> 
+              <a href="https://twitter.com/stratiobd" target="_blank" class="support">
+               <img class="helper" src="_static/images/twitter.png" alt=""/>
+              </a>         
             </div>
-            <a href="{{ theme_github }}" target="_blank" class="support">
-                <img class="helper" src="_static/images/github.png" alt=""/>
-            </a>   
-             <a href="{{ theme_jira }}" target="_blank" class="support">
-                <img class="helper" src="_static/images/jira.png" alt=""/>
-             </a> 
-             <a href="https://twitter.com/stratiobd" target="_blank" class="support">
-                 <img class="helper" src="_static/images/twitter.png" alt=""/>
-             </a>         
-          </div>
           <div id="main-menu">
             {% block menu %}
               {% set toctree = toctree(maxdepth=2, collapse=True, includehidden=True) %}

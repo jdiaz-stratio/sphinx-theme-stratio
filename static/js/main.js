@@ -14,9 +14,6 @@ $( document ).ready(function() {
     });   
   }
 
-  function animateArrow(){
-    
-  }
 });
 
 /*** Show and hide the sidebar in responsive mode ***/
@@ -25,6 +22,36 @@ $(document).ready(function(){
     $('#sidebar').toggleClass('shown');
   });
 });
+
+
+/*** MORE PRODCUTS ****/
+
+$(document).ready(function(){
+  $('.more-products-arrow').click(function(event){
+    event.preventDefault();
+    $('#select-product').removeClass('closed');
+    contentScroll();
+  });
+
+  $('.close-more-products').click(function(event){
+    event.preventDefault();
+    $('#select-product').addClass('closed');
+  });
+
+
+  function contentScroll(){
+    var windowHeight = $(window).height();
+    var contentTop = $('.products-content').offset().top;
+    var contentHeight = $('.products-content').height();
+    if(windowHeight < contentTop + contentHeight){
+      console.log('scrollbar');
+      $('.products-content').mCustomScrollbar();
+    }
+  }
+});
+
+
+
 
 /*** SCROLL BAR ***/
 $(document).ready(function(){
