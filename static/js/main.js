@@ -40,13 +40,16 @@ $(document).ready(function(){
 
 
   function contentScroll(){
-    var windowHeight = $(window).height();
-    var contentTop = $('.products-content').offset().top;
-    var contentHeight = $('.products-content').height();
-    if(windowHeight < contentTop + contentHeight){
-      console.log('scrollbar');
-      $('.products-content').mCustomScrollbar();
-    }
+    //We need delay becouse of css transitions time
+    setTimeout(function() {
+      var windowHeight = $(window).height();
+      var contentTop = $('.products-content').offset().top;
+      var contentHeight = $('.products-content').height();
+      if(windowHeight < contentTop + contentHeight){
+        $('.products-content').mCustomScrollbar();
+      }        
+    }, 500);    
+   
   }
 });
 

@@ -107,6 +107,10 @@ header .site-title div{
   box-sizing: border-box;
 }
 
+.module-name span{
+  text-transform: uppercase;
+}
+
 #sidebar-options .more-products-arrow{
   float:right;
   width: 70px;
@@ -170,6 +174,7 @@ header .site-title div{
   float: left;
   padding-left: 20px;
   padding-right: 20px;
+  padding: 0 20px 40px 20px;
   box-sizing: border-box;
 }
 
