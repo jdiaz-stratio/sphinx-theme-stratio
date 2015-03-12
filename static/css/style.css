@@ -233,7 +233,7 @@ header .site-title div{
 #main-menu{
   height: calc(100% - 120px);
   float: left;
-  padding: 20px 0 20px 0;
+  padding: 20px 0 60px 0;
   box-sizing: border-box;
 }
 
@@ -562,20 +562,35 @@ margin-top: 10px;
   }
 
 /*** SEARCH BOX ***/
+#search-wrapper{
+  position: relative;
+  float: left;
+}
+
 #search-wrapper input{
-  width: 260px;
-  height: 40px;
+  width: 280px;
   outline: 0;
   border: none;
   height: 40px;
   padding-left: 20px;
   background: #AAA;
   color: white;
+  padding-right: 42px;
+  box-sizing: border-box;
 }
 
 #search-wrapper input:focus{
   outline: 0;
   border:  none;  
+}
+
+#search-wrapper i{
+  position: absolute;
+  top: 0;
+  right: 15px;
+  margin-top: 10px;
+  font-size: 20px;
+  color:    #f2f2f2;
 }
 
 #search-wrapper input::-webkit-input-placeholder { /* WebKit browsers */
