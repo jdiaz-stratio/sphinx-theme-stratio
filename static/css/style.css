@@ -105,6 +105,9 @@ header .site-title div{
   padding: 23px 0 15px 10px;
   background: #00b7e8;
   box-sizing: border-box;
+  white-space:nowrap;   
+  overflow:hidden;
+  text-overflow: ellipsis;
 }
 
 .module-name span{
@@ -525,6 +528,7 @@ margin-top: 10px;
   padding-top: 8px;
   top:0px;
   left:0px;
+  z-index: 1001;
 }
 
 #select-product{
