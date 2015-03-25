@@ -646,6 +646,17 @@ ul.search .context{
 }
 
 
+pre{
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em
+}
+
 
 
 
