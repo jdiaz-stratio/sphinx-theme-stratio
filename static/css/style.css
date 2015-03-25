@@ -255,6 +255,10 @@ header .site-title div{
   text-decoration: none;
 }
 
+#main-menu a:hover{
+  font-weight: bold;
+}
+
 a.current{
   font-weight: bold;
 }
