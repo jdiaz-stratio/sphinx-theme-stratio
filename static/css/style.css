@@ -568,6 +568,7 @@ margin-top: 10px;
     top:0px;
     left:auto;
     right: 12px;
+    z-index: 1000;
   }
 
 /*** SEARCH BOX ***/
