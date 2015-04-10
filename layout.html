@@ -22,6 +22,8 @@
             FILE_SUFFIX: '{{ '' if no_search_suffix else file_suffix }}',
             HAS_SOURCE:  {{ has_source|lower }}
           };
+
+          var currentVersion = '{{ version }}';
     </script>
 
     {%- for scriptfile in script_files %}
@@ -83,7 +85,7 @@
           <div id="sidebar-options">
             <a href="index.html">
               <img class="module-logo" src="http://docs.stratio.com/_static/images/modules_logos/{{ theme_module_name }}.png">
-              <div class="module-name">
+              <div id="module-name" class="module-name" >
                   STRATIO
                   <span> {{ theme_module_name }} </span>              
               </div>
@@ -104,15 +106,8 @@
 
             </div>
             <div id="versions" class="select-style">    
-              <ul>
-                  <li> {{ version }} <a class="arrow">›</a></li>
-                 {%- for avariableVersion in theme_versions %}
-                    <li> 
-                        <a href="../{{ avariableVersion }}">
-                           {{ avariableVersion }}
-                        </a>                        
-                    </li>
-                {%- endfor %}     
+              <ul id="versions-list">
+                  <li> {{ version }} <a class="arrow">›</a></li>                 
               </ul> 
               </div>
               <a href="{{ theme_github }}" target="_blank" class="support">
